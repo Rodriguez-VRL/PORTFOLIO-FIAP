@@ -7,8 +7,6 @@ header{
     padding-right: 20px;
     
 
-
-    
 }
 a{
     color: white;
@@ -19,8 +17,10 @@ a{
     margin-right: 50px;
     margin-top: 40px;
 }
-nav{
+.primeira_nave{
     text-align: right;
+    animation: bounceInRight ;
+    animation-duration: 1000ms;
 }
 
 
@@ -146,6 +146,8 @@ h1 {
 
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 1.00);
     filter: drop-shadow(0px 5px 5px rgba(255, 255, 255, 0.50));
+    animation: fadeInTopLeft;
+    animation-duration: 1000ms; 
         }
 
 
@@ -169,6 +171,8 @@ h2 {
     color: white;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 1.00);
     filter: drop-shadow(0px 5px 5px rgba(255, 255, 255, 0.50));
+    animation: fadeInBottomRight;
+    animation-duration: 1000ms; 
 
 }
 
@@ -176,12 +180,14 @@ h2 {
 
 
 .gallery-container{
-    top: 100px;
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 2vw;
+    gap: 1vw;
     padding: 0 2vw;
+    padding-top: 100px;
+
 
     
 }
@@ -195,7 +201,7 @@ h2 {
     box-shadow: 5px 5px 5px #0006;
     flex-grow: 1;
     transition: transformar .5s linear;
-    
+    text-align: center;
     
 }
 
@@ -204,14 +210,27 @@ h2 {
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
+    filter: brightness(30%);
 
+}
+
+.gallery-items img:hover{
+    filter: brightness(100%);
+    
 }
 
 .gallery-items:hover{
     transform: scale(1.3);
+    
 }
 
-.banner{
-    padding-top: 350px;
+.gallery-items h3{
+    font-family: 'Prosto One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.3em;
+    color: #FFE600;
 }
 

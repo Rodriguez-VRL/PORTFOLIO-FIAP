@@ -1,28 +1,59 @@
+
+
+
 header{
     background:linear-gradient(89.99deg, #203A43 42%, rgba(223, 18, 18, 0.89) 97%);
-    height: 163px;
+    height: 130px;
     line-height: 50px; 
     border-bottom: 10px solid black;
     padding-left: 20px;
     padding-right: 20px;
-    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+
+
+.content{
+    text-align: center;
+    align-items: center ;
+    transition: 1s;
+
+
+
+
 
 }
 a{
     color: white;
-    font-size: 15px;
+    font-size: 13px;
     font-family: 'Potta One', cursive;
     font-weight: 400px;
     text-decoration: none ;
-    margin-right: 50px;
-    margin-top: 40px;
+    margin-top: 10px;   
+
 }
 .primeira_nave{
     text-align: right;
     animation: bounceInRight ;
     animation-duration: 1000ms;
-}
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    z-index: 2; 
 
+}
+.btn_icon_header{
+    background: transparent;
+    border: none;
+    color: var(--color-white);
+    cursor: pointer;
+    display: none;
+}
 
 #button_home{
     filter: drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.50));
@@ -63,19 +94,9 @@ a{
     color: yellow;
 }
 
-#button_telegram{
-    filter: drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.50));
-
-
-}
-
-#button_telegram:hover{
-    color: yellow;
-}
-
 #button_help{
     color: black;
-    font-size: 18px;
+    font-size: 15px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
 
@@ -86,7 +107,7 @@ a{
 
 #button_login{
     color: black;
-    font-size: 18px;
+    font-size: 15px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
 
@@ -99,16 +120,16 @@ a{
     font-family: 'Oxanium', cursive;
     font-style: normal;
     font-weight: 800;
-    font-size: 20px;
-    line-height: 25px;
+    font-size: 15px;
+    line-height: 2px;
     text-shadow: 0px 1px 1px #000000;
     color: black;
     display: inline-block;
     background-color: white;
-    height: 60px;
-    line-height: 60px;
-    padding-left: 20px;
-    padding-right: 20px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 2px;
+    padding-right: 2px;
     border: 1px solid #FFFFFF;
     box-shadow: 0px 5px 4px #000000;
     border-radius: 100px;
@@ -130,7 +151,7 @@ h1 {
     width: 186.52px;
     height: 32px;
     left: 59.21px;
-    top: 40px;
+    top: 35px;
 
 
     font-family: 'Poppins', sans-serif;
@@ -156,7 +177,7 @@ h2 {
     width: 215.14px;
     height: 44px;
     left: 133.23px;
-    top: 80px;
+    top: 70px;
 
 
     font-family: 'Poppins', sans-serif;
@@ -184,7 +205,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 1vw;
+    gap: 3vw;
     padding: 0 2vw;
     padding-top: 100px;
 
@@ -194,8 +215,8 @@ h2 {
 
 .gallery-items{
     color: #000000;
-    width: 250px;
-    height: 150px;
+    width: 235px;
+    height: 125px;
     border: 1px solid #FFF;
     border-radius: 20px;
     box-shadow: 5px 5px 5px #0006;
@@ -220,7 +241,7 @@ h2 {
 }
 
 .gallery-items:hover{
-    transform: scale(1.3);
+    transform: scale(1.2);
     
 }
 
@@ -234,3 +255,31 @@ h2 {
     color: #FFE600;
 }
 
+@keyframes load{
+    to{transform: rotate(360deg)}
+}
+.pre{
+    width: 80px;
+    height: 80px;
+    background-image: url("https://ilustracode.com.br/assets/images/load.png");
+    background-position: center;
+    background-size: contain;
+    animation: load 2s infinite linear;
+
+
+
+
+}
+
+.box-load{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudoload{
+    display: none;
+}
